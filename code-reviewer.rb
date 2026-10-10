@@ -5,21 +5,21 @@
 class CodeReviewer < Formula
   desc "AI-powered code review CLI for GitLab and GitHub. Uses Vertex AI (Gemini, Claude, Mistral) to analyze diffs and post actionable findings."
   homepage "https://github.com/OpticDiff/code-reviewer"
-  version "0.24.0"
+  version "0.25.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/OpticDiff/code-reviewer/releases/download/v0.24.0/code-reviewer_0.24.0_darwin_amd64.tar.gz"
-      sha256 "6f777ba26f757d917b75c6cd25eefdf3e23e4094a75ac97bc5ecf9591ea53557"
+      url "https://github.com/OpticDiff/code-reviewer/releases/download/v0.25.0/code-reviewer_0.25.0_darwin_amd64.tar.gz"
+      sha256 "ec0e717308ea7aedfca9f3bfaa2b9021b8045cdd129d960957aed8fe70f9c937"
 
       define_method(:install) do
         bin.install "code-reviewer"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/OpticDiff/code-reviewer/releases/download/v0.24.0/code-reviewer_0.24.0_darwin_arm64.tar.gz"
-      sha256 "f107712032f83dcc2568553f7e396fb4e5d2a013908b27622d9831a5464a32fe"
+      url "https://github.com/OpticDiff/code-reviewer/releases/download/v0.25.0/code-reviewer_0.25.0_darwin_arm64.tar.gz"
+      sha256 "0e7a5e2a3223ec99ea0872f00baf89c0cf63ee4f2beac07786547cb9b34f81a4"
 
       define_method(:install) do
         bin.install "code-reviewer"
@@ -29,15 +29,15 @@ class CodeReviewer < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/OpticDiff/code-reviewer/releases/download/v0.24.0/code-reviewer_0.24.0_linux_amd64.tar.gz"
-      sha256 "47184f7ca709966f4e095bed4b5076f1e3f149d158721829fe0449f7c2dbb9e2"
+      url "https://github.com/OpticDiff/code-reviewer/releases/download/v0.25.0/code-reviewer_0.25.0_linux_amd64.tar.gz"
+      sha256 "48f306621a5bb972ab600f963823ad5ee4e2e5cdd0cf0a3fce764e2368170f1f"
       define_method(:install) do
         bin.install "code-reviewer"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/OpticDiff/code-reviewer/releases/download/v0.24.0/code-reviewer_0.24.0_linux_arm64.tar.gz"
-      sha256 "fb266b8e00d974566e66685ac821be9b001e0c562bc6390945b5e411095641e0"
+      url "https://github.com/OpticDiff/code-reviewer/releases/download/v0.25.0/code-reviewer_0.25.0_linux_arm64.tar.gz"
+      sha256 "d276adfdeb8a642af16c995d1db6525d00776f0b73a5c2dadf3d1a5e082d59f7"
       define_method(:install) do
         bin.install "code-reviewer"
       end
